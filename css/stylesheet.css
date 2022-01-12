@@ -1,0 +1,12 @@
+body {
+	background-color: #031830;
+}
+
+.container {
+	width: 80vw;
+	height: auto;
+	margin: auto;
+	display: flex;
+	flex-direction: row;
+	justify-content: start;
+}
