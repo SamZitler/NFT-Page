@@ -1,0 +1,122 @@
+:root {
+    --bodyBackground: #0d192b;
+    --cardBackground: #14253d;
+    --highlighted: #00fff8;
+    --textColor: #417aaf;
+    --bodyItemsMargin: 18px 0px;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+a:hover {
+    color:#00fff8;
+}
+
+.container {
+    background-color: var(--bodyBackground);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: Calibri, Arial, Helvetica, sans-serif;
+    font-size: 1.2em;
+}
+
+.card {
+    background-color: var(--cardBackground);
+    width: 300px;
+    border-radius: 15px;
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+    padding: 25px;
+}
+
+.cardHead {
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+}
+
+    .cardHead img {
+        width:100%;
+        display: block;
+    }
+
+    .cardHead::after {
+        content: url("../images/icon-view.svg");
+        position: absolute;
+        top:0;
+        bottom:0;
+        left:0;
+        right:0;
+        display: flex;
+        justify-content: center;
+        align-items:center;
+        background: rgba(0, 255, 247, 0.5);
+        opacity: 0;
+        transition:all 500ms;
+    }
+
+    .cardHead:hover::after {
+        opacity:1;
+    }
+
+.cardBody {
+    border-bottom: 1px solid #2f415b;
+}
+
+    .cardName {
+        font-size: 1.3em;
+        font-weight: 500;
+        margin: var(--bodyItemsMargin);
+    }
+
+    .cardText {
+        color: var(--textColor);
+        margin: var(--bodyItemsMargin);
+    }
+
+    .status {
+        margin: var(--bodyItemsMargin);
+        margin-bottom: 22px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .price, .time {
+        display: flex;
+        align-items: center;
+        gap: 3px;
+    }
+
+    .price {
+        color: var(--highlighted);
+    }
+
+    .time {
+        color: var(--textColor);
+    }
+
+.cardFooter {
+    padding: 20px 0px 10px 0px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 8px;
+    color: var(--textColor);
+}
+    .cardFooter img {
+        width: 1.6em;
+        border-radius:50%;
+        border: 2px solid white;
+    }
